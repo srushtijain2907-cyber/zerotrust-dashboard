@@ -1,6 +1,6 @@
 # AI-Powered Multi-Cloud Anomaly Detection & Zero Trust Enforcement System
 ## GHRCE B.Tech IT Capstone Project 2026
-### Team: Srushti Jain (C28) | Vishwajeet Atal (C49) | Ridam Harale | Purab Roy (B48)
+### Team: Srushti Jain (C28) | Vishwajeet Atal (C49)  | Purab Roy (B48)
 
 ---
 
@@ -187,7 +187,6 @@ Zero Trust Decision (Jeong & Yang 2025, Page 14)
 |----------|----------|------|
 | admin | ZeroTrust@2026 | Security Admin |
 | srushti | srushti123 | Analyst |
-| ridam | ridam123 | Analyst |
 | vishwajeet | vishwajeet123 | Analyst |
 
 ---
