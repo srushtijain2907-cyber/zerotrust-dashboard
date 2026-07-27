@@ -1,0 +1,24 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+# Secrets - never commit
+gcp-key.json
+*.pem
+.env
+
+# Debug files created during troubleshooting
+config.json
+config2.json
+full_logs.txt
+console_log.txt
+console_log.json
+users.json
+*.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Trust Login</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#0a0e1a 0%,#0d1526 50%,#0a1628 100%);
+  font-family:'Segoe UI',system-ui,sans-serif;
+}
+.particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.particle{
+  position:absolute;width:2px;height:2px;background:#3b82f6;border-radius:50%;
+  animation:float 8s infinite linear;opacity:.4;
+}
+@keyframes float{0%{transform:translateY(100vh) scale(0)}100%{transform:translateY(-100px) scale(1);opacity:0}}
+.box{
+  position:relative;z-index:1;background:rgba(13,21,38,.9);
+  border:1px solid rgba(59,130,246,.25);border-radius:16px;
+  padding:48px 40px;width:400px;backdrop-filter:blur(20px);
+  box-shadow:0 25px 60px rgba(0,0,0,.6),0 0 40px rgba(59,130,246,.08);
+}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:32px;justify-content:center}
+.logo-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.logo-text{font-size:20px;font-weight:700;color:#fff}
+.logo-sub{font-size:11px;color:#64748b;margin-top:2px}
+h2{text-align:center;color:#e2e8f0;font-size:18px;margin-bottom:6px}
+.subtitle{text-align:center;color:#64748b;font-size:13px;margin-bottom:28px}
+label{display:block;font-size:12px;color:#94a3b8;margin-bottom:6px;letter-spacing:.04em;text-transform:uppercase}
+input{
+  width:100%;background:#060c18;border:1px solid #1e3a5f;color:#e2e8f0;
+  border-radius:8px;padding:11px 14px;font-size:14px;margin-bottom:18px;
+  transition:border-color .2s;outline:none;
+}
+input:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+button{
+  width:100%;background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+  color:#fff;border:none;border-radius:8px;padding:13px;
+  font-size:15px;font-weight:600;cursor:pointer;
+  transition:opacity .2s,transform .1s;letter-spacing:.02em;
+}
+button:hover{opacity:.9;transform:translateY(-1px)}
+.error{
+  background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);
+  color:#fca5a5;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:16px;text-align:center;
+}
+.creds{
+  margin-top:20px;padding:12px;background:rgba(59,130,246,.06);
+  border:1px solid rgba(59,130,246,.15);border-radius:8px;text-align:center;
+}
+.creds p{font-size:12px;color:#64748b}
+.creds code{color:#60a5fa;font-size:12px}
+</style>
+</head>
+<body>
+<div class="particles">
+{% for i in range(15) %}
+<div class="particle" style="left:{{(i*7)%100}}%;animation-delay:{{i*0.5}}s;animation-duration:{{6+i%4}}s"></div>
+{% endfor %}
+</div>
+<div class="box">
+  <div class="logo">
+    <div class="logo-icon">🛡️</div>
+    <div>
+      <div class="logo-text">ZeroTrust AI</div>
+      <div class="logo-sub">Multi-Cloud Security Platform</div>
+    </div>
+  </div>
+  <h2>Secure Access Portal</h2>
+  <p class="subtitle">Never Trust — Always Verify</p>
+  {% if error %}<div class="error">{{ error }}</div>{% endif %}
+  <form method="POST">
+    <label>Username</label>
+    <input name="username" type="text" placeholder="Enter username" autofocus required>
+    <label>Password</label>
+    <input name="password" type="password" placeholder="Enter password" required>
+    <button type="submit">Sign In →</button>
+  </form>
+  <div class="creds">
+    <p>Demo: <code>admin</code> / <code>ZeroTrust@2026</code></p>
+  </div>
+</div>
+</body>
+</html>
