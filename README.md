@@ -1,6 +1,7 @@
 # AI-Powered Multi-Cloud Anomaly Detection & Zero Trust Enforcement System
 ## GHRCE B.Tech IT Capstone Project 2026
-### Team: Srushti Jain (C28) | Vishwajeet Atal (C49)  | Purab Roy (B48)
+### Team Leader: Srushti Jain (C28) 
+# Team Member : Vishwajeet Atal (C49)  Purab Roy (B48)
 
 ---
 
@@ -119,7 +120,7 @@ http://localhost:5000
 Login credentials:
 - Username: admin   Password: ZeroTrust@2026
 - Username: srushti Password: srushti123
-- Username: ridam   Password: ridam123
+- Username: vishwajeet atal: vishwajeet123
 
 ---
 
