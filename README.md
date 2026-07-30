@@ -1,7 +1,7 @@
 # AI-Powered Multi-Cloud Anomaly Detection & Zero Trust Enforcement System
 ## GHRCE B.Tech IT Capstone Project 2026
 ### Team Leader: Srushti Jain (C28) 
-# Team Member : Vishwajeet Atal (C49)  Purab Roy (B48)
+# Team Member : Vishwajeet Atal (C49)  Purab Roy (48)
 
 ---
 
